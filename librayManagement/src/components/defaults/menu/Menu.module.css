@@ -1,0 +1,69 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+}
+
+.menuWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.menuItems {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: #000000;
+}
+
+.menuItems h3 {
+    margin: 0 0 0 10px;
+    font-size: 16px;
+}
+
+.menuItems span {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.menuItems span h3:first-child {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* Style for the logout button */
+.menuLogout {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.menuLogout span {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.menuLogout h3 {
+    margin-left: 10px;
+}
+
+.menuLogout span h3:first-child {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+}
