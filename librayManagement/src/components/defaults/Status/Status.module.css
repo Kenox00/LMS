@@ -52,6 +52,7 @@
   
   .statCard {
     background-color: white;
+    justify-content: space-between;
     border-radius: 10px;
     padding: 20px;
     display: flex;

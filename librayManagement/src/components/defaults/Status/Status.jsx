@@ -48,32 +48,36 @@ const Status = () => {
       </header>
       <div className={styles.stats}>
         <div className={styles.statCard}>
-          <div className={styles.statIcon}>📚</div>
+          
           <div className={styles.statInfo}>
             <h2>122</h2>
             <p>Total Visitors</p>
           </div>
+          <div className={styles.statIcon}>📚</div>
         </div>
         <div className={styles.statCard}>
-          <div className={styles.statIcon}>📖</div>
+          
           <div className={styles.statInfo}>
             <h2>96</h2>
             <p>Books Borrowed</p>
           </div>
+          <div className={styles.statIcon}>📖</div>
         </div>
         <div className={styles.statCard}>
-          <div className={styles.statIcon}>👤</div>
+
           <div className={styles.statInfo}>
             <h2>20</h2>
             <p>Books Overdue</p>
-          </div>
+          </div> 
+          <div className={styles.statIcon}>👤</div>
         </div>
         <div className={styles.statCard}>
-          <div className={styles.statIcon}>📚</div>
+        
           <div className={styles.statInfo}>
             <h2>7821</h2>
             <p>Total Books</p>
           </div>
+            <div className={styles.statIcon}>📚</div>
         </div>
       </div>
       <div className={styles.tables}>
