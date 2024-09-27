@@ -1,6 +1,13 @@
 // Status.jsx
-import React, { useState, useEffect } from 'react';
+import {useState, useEffect } from 'react';
 import styles from './Status.module.css';
+import bookIcon from '../../../assets/Images/status/bookIcon.png';
+import totalbook from '../../../assets/Images/status/totalBooks.png'
+import overdue from '../../../assets/Images/status/overdue.png'
+import openedbook from '../../../assets/Images/status/openedBook.png'
+
+
+
 
 const Status = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
@@ -26,7 +33,7 @@ const Status = () => {
       minute: '2-digit',
       hour12: true
     };
-    return date.toLocaleDateString('en-US', options).replace(',', '|').toLowerCase();
+    return date.toLocaleDateString('en-US', options).replace(',', '  |').toUpperCase();
   };
 
   const handlePeriodChange = (e) => {
@@ -35,44 +42,60 @@ const Status = () => {
 
   return (
     <div className={styles.dashboard}>
+      <div className = {styles.container}>
       <header className={styles.header}>
-        <h1>Hello, <span className={styles.librarian}>Librarian</span></h1>
+        <div className={styles.text}>
+          <h1>Hello, <span className={styles.librarian}>Librarian</span></h1>
         <p className={styles.date}>{formatDate(currentDateTime)}</p>
-        <div className={styles.dropdown}>
-          <select value={selectedPeriod} onChange={handlePeriodChange}>
-            <option value="This week">This week</option>
-            <option value="2 weeks">2 weeks</option>
-            <option value="This month">This month</option>
-          </select>
         </div>
+        
+          <div className={styles.dropdown}>
+            <select value={selectedPeriod} onChange={handlePeriodChange}>
+              <option value="This week">This week</option>
+              <option value="2 weeks">2 weeks</option>
+              <option value="This month">This month</option>
+            </select>
+          </div>
       </header>
       <div className={styles.stats}>
         <div className={styles.statCard}>
-          <div className={styles.statIcon}>📚</div>
+          
           <div className={styles.statInfo}>
             <h2>122</h2>
             <p>Total Visitors</p>
           </div>
+          <div className={styles.statIcon}>
+            <img src={bookIcon}/>
+          </div>
         </div>
         <div className={styles.statCard}>
-          <div className={styles.statIcon}>📖</div>
+          
           <div className={styles.statInfo}>
             <h2>96</h2>
             <p>Books Borrowed</p>
           </div>
-        </div>
-        <div className={styles.statCard}>
-          <div className={styles.statIcon}>👤</div>
-          <div className={styles.statInfo}>
-            <h2>20</h2>
-            <p>Books Overdue</p>
+          <div className={styles.statIcon}>
+            <img src={openedbook}/>
           </div>
         </div>
         <div className={styles.statCard}>
-          <div className={styles.statIcon}>📚</div>
+         
+          <div className={styles.statInfo}>
+            <h2>20</h2>
+            <p>Books Overdue</p>
+          </div> 
+          <div className={styles.statIcon}>
+            <img src= {overdue}/>
+          </div>
+        </div>
+        <div className={styles.statCard}>
+          
           <div className={styles.statInfo}>
             <h2>7821</h2>
             <p>Total Books</p>
+          </div>
+          <div className={styles.statIcon}>
+            <img src={totalbook}/>
           </div>
         </div>
       </div>
@@ -133,6 +156,7 @@ const Status = () => {
           </table>
           <a href="#" className={styles.viewMore}>View More</a>
         </div>
+      </div>
       </div>
     </div>
   );
