@@ -12,7 +12,7 @@ import openedbook from '../../../assets/Images/status/openedBook.png'
 const Status = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [selectedPeriod, setSelectedPeriod] = useState('This week');
-
+  
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentDateTime(new Date());
