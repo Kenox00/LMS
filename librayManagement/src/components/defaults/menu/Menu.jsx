@@ -1,4 +1,4 @@
-import React from "react";
+
 import style from "./Menu.module.css";
 import { FaClipboardList, FaBookDead, FaClock, FaSignOutAlt } from 'react-icons/fa'; // Added logout icon
 
