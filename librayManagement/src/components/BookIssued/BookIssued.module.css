@@ -1,0 +1,13 @@
+.container{
+    font-family: var(--font-primary);
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 70%;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+}

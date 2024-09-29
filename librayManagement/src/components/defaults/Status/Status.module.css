@@ -18,7 +18,7 @@
 }
 .header h1 {
   font-size: 32px;
-  margin: 0;
+  margin-left: 24px;
   letter-spacing: 4%;
   line-height: 24px;
 }
@@ -29,6 +29,7 @@
 
 .date {
   font-size: 18px;
+  margin-left: 24px;
   color: black;
   font-weight: bold;
 }
@@ -73,7 +74,7 @@
   border-radius: 15px;
   display: flex;
   align-items: center;
-  width: 199px;
+  width: 220px;
   height: 120px;
   gap: 20px;
 }
@@ -116,11 +117,26 @@
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
-.tableContainer h3 {
+.tableContainer  h3 {
   margin-top: 0;
   margin-bottom: 15px;
 }
-
+.tableContainer .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.tableContainer .text button {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: var(--font-primary);
+  font-weight: b;
+  border: 1px solid #afafaf;
+  padding: 10px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
 .table {
   width: 100%;
   border-collapse: collapse;

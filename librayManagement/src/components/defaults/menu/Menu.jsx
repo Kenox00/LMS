@@ -1,37 +1,42 @@
 
 import style from "./Menu.module.css";
 import { FaClipboardList, FaBookDead, FaClock, FaSignOutAlt } from 'react-icons/fa'; // Added logout icon
+import home from "../../../assets/Images/Menu/home.png"
+import books from "../../../assets/Images/Menu/books.png";
+import overdue from "../../../assets/Images/Menu/overdue.png";
+import reservation from "../../../assets/Images/Menu/reservation.png";
 
 const Menu = () => {
   return (
     <div className={style.menu}>
       <div className={style.menuWrapper}>
         <div className={style.menuItems}>
+           <img src={home} alt="home" />
           <span>
-            <h3>Dashboard</h3>
+            <h3><a href="">Home</a> </h3>
           </span>
         </div>
         <div className={style.menuItems}>
-          <FaClipboardList color="#ff00ff" size={20} />
+         <img src={books} alt="books" />
           <span>
-            <h3>Categories</h3>
+          <h3><a href="">Books</a> </h3>
           </span>
         </div>
         <div className={style.menuItems}>
-          <FaBookDead color="#ff00ff" size={20} />
+         <img src={overdue} alt="overdue" />
           <span>
-            <h3>Books Overdue</h3>
+          <h3><a href="">Overdue Books</a> </h3>
           </span>
         </div>
         <div className={style.menuItems}>
-          <FaClock color="#ff00ff" size={20} />
+        <img src={reservation} alt="reservation" />
           <span>
-            <h3>Reservations</h3>
+          <h3><a href="">Reservation</a> </h3>
           </span>
         </div>
       </div>
       
-      {/* Added icon for the logout button */}
+    
       <div className={style.menuLogout}>
         <FaSignOutAlt color="#ff0000" size={20} /> 
         <span>
