@@ -1,0 +1,10 @@
+
+.Status {
+    float: right;
+    margin: 10px;
+}
+.dashboard{
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

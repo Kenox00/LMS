@@ -1,6 +1,5 @@
-import React from 'react'
 import Issued from './Issued/Issued'
-import Analyticis from './Analytical/Analyticis'
+import Analyticis from '../Analytical/Analyticis'
 import styles from './BookIssued.module.css'
 
 const BookIssued = () => {

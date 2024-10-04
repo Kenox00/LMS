@@ -7,3 +7,6 @@
     --color-primary: #093AFE;
     --color-secondary: #FE09AC;
 }
+body{
+    overflow: hidden;
+}

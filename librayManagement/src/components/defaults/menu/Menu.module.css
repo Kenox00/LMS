@@ -1,19 +1,22 @@
 .menu {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     width: 13%;
     height: 100vh;
     padding: 20px;
     background-color: #ffffff;
     position: fixed;
     left: 0;
+    top: 0;
+    z-index: -2;
 }
 
 .menuWrapper {
     display: flex;
     justify-content: center;
+    gap: 30px;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -27,9 +30,13 @@
     margin: 10px 0;
     color: #000000;
     transition: color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.menuItems:hover {
+.menuItems:hover,
+.menuItemsActive {
     color: white;
     background-color: blue;
     border-radius: 20px;
@@ -43,8 +50,7 @@
 
 .menuItems h3 {
     margin: 0 0 0 10px;
-    font-size: 16px;
-    cursor: pointer;
+    font-size: 20px;
 }
 
 .menuItems h3 a {
@@ -52,23 +58,11 @@
     color: #000000;
 }
 
-.menuItems:hover h3 a {
-    color: white;
-}
-
-/* Active state similar to hover */
-.menuItemsActive {
-    background-color: blue;
-    color: white;
-    border-radius: 20px;
-    width: 100%;
-}
-
+.menuItems:hover h3 a,
 .menuItemsActive h3 a {
     color: white;
 }
 
-/* Style for the logout button */
 .menuLogout {
     display: flex;
     align-items: center;
@@ -85,9 +79,6 @@
 
 .menuLogout h3 {
     margin-left: 10px;
-}
-
-.menuLogout span h3:first-child {
     background-color: #ff0000;
     color: #ffffff;
     padding: 10px;
