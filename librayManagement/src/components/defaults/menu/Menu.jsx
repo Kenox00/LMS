@@ -1,18 +1,17 @@
-// import { rourer, routes ,Route} from 
+import { Link } from "react-router-dom";
 import style from "./Menu.module.css";
-import home from "../../../assets/Images/Menu/home.png"
+import home from "../../../assets/Images/Menu/home.png";
 import books from "../../../assets/Images/Menu/books.png";
 import overdue from "../../../assets/Images/Menu/overdue.png";
 import reservation from "../../../assets/Images/Menu/reservation.png";
 
-
 function Menu() {
   const menubar = [
-    {"title": "Home", "icon": `${home}`},
-    {"title": "Borrowing", "icon": `${books}`},
-    {"title": "Books", "icon": `${books}`},
-    {"title": "Books Overdue", "icon": `${overdue}`},
-    {"title": "Reservation", "icon": `${reservation}`},
+    { title: "Home", icon: home, path: "/" },
+    { title: "Borrowing", icon: books, path: "/borrowing" },
+    { title: "Books", icon: books, path: "/books" },
+    { title: "Books Overdue", icon: overdue, path: "/overdue" },
+    { title: "Reservation", icon: reservation, path: "/reservation" },
   ];
 
   return (
@@ -22,13 +21,15 @@ function Menu() {
           <div key={index} className={style.menuItems}>
             <img src={item.icon} alt={item.title.toLowerCase()} />
             <span>
-              <h3><a href="">{item.title}</a></h3>
+              <h3>
+                <Link to={item.path}>{item.title}</Link>
+              </h3>
             </span>
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default Menu;

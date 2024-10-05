@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Issued.module.css'
+import Button from '../../defaults/Button/Button';
 
 const Issued = () => {
   const data = [
@@ -13,7 +14,9 @@ const Issued = () => {
     <div className={styles.tableContainer}>
       <div className={styles.text}>
           <h3>Top Readers</h3>
-          <button>view more</button>
+          <Button variant="viewmore" >
+            View More
+          </Button>
       </div>
     
       <table className={styles.table}>

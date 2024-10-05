@@ -1,40 +1,60 @@
-import styles from './Analyticis.module.css'
+// Analytics.jsx
+import React from "react";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  LinearScale,
+  CategoryScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import styles from "./Analyticis.module.css";
+import Button from "../../defaults/Button/Button";
 
-const Analyticis = () => {
-  const reservationData = [
-    { id: '001', bookName: '1984', author: 'George Orwell', status: 'Pending' },
-    { id: '002', bookName: 'To Kill a Mockingbird', author: 'Harper Lee', status: 'Expired' },
-  ];
+ChartJS.register(
+  LinearScale,
+  CategoryScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+const Analytics = ({ datasets, labels, title, onButtonClick }) => {
+  const chartData = {
+    labels,
+    datasets: datasets.map((dataset, index) => ({
+      label: dataset.label || `Dataset ${index + 1}`,
+      data: dataset.data,
+      borderColor: dataset.borderColor || "blue",
+      fill: false,
+    })),
+  };
+
+  const options = {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  };
 
   return (
-    <div className={styles.tableContainer}>
-      <div className={styles.text}>
-        <h3>Reservation</h3>
-        <button>view more</button>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <h3>{title || "Analytics"}</h3>
+        <Button variant="viewmore" onClick={onButtonClick} >
+          View Analytics
+        </Button>
       </div>
-
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th>User ID</th>
-            <th>Book Name</th>
-            <th>Author</th>
-            <th>Reservation status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {reservationData.map((item) => (
-            <tr key={item.id}>
-              <td>{item.id}</td>
-              <td>{item.bookName}</td>
-              <td>{item.author}</td>
-              <td>{item.status}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <Line data={chartData} options={options} />
     </div>
-  )
-}
+  );
+};
 
-export default Analyticis
+export default Analytics;

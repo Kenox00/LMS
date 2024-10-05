@@ -4,26 +4,25 @@
     justify-content: center;
     align-items: center;
     width: 13%;
-    height: 100vh;
+    height: 80vh;
     padding: 20px;
     background-color: #ffffff;
     position: fixed;
     left: 0;
-    top: 0;
-    z-index: -2;
-}
-
-.menuWrapper {
+    
+  }
+  
+  .menuWrapper {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
     flex-grow: 1;
-}
-
-.menuItems {
+  }
+  
+  .menuItems {
     display: flex;
     align-items: center;
     width: 100%;
@@ -33,54 +32,32 @@
     cursor: pointer;
     padding: 10px;
     box-sizing: border-box;
-}
-
-.menuItems:hover,
-.menuItemsActive {
+  }
+  
+  .menuItems:hover {
     color: white;
     background-color: blue;
     border-radius: 20px;
-    width: 100%;
-}
-
-.menuItems img {
+  }
+  
+  .menuItems img {
     width: 20px;
     height: 20px;
-}
-
-.menuItems h3 {
+  }
+  
+  .menuItems h3 {
     margin: 0 0 0 10px;
     font-size: 20px;
-}
-
-.menuItems h3 a {
+  }
+  
+  .menuItems h3 a {
     text-decoration: none;
     color: #000000;
-}
-
-.menuItems:hover h3 a,
-.menuItemsActive h3 a {
-    color: white;
-}
-
-.menuLogout {
-    display: flex;
-    align-items: center;
-    margin-top: auto;
-    width: 100%;
-}
-
-.menuLogout span {
-    display: flex;
-    align-items: center;
-    width: 100%;
     cursor: pointer;
-}
-
-.menuLogout h3 {
-    margin-left: 10px;
-    background-color: #ff0000;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 20px;
-}
+    transition: color 0.3s ease;
+  }
+  
+  .menuItems:hover h3 a {
+    color: white;
+  }
+  

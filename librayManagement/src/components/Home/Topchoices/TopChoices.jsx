@@ -1,9 +1,9 @@
 import styles from './TopChoices.module.css';
-import book1 from '../../assets/Images/TopChoices/book1.png';
-import book2 from '../../assets/Images/TopChoices/book2.png';
-import book3 from '../../assets/Images/TopChoices/book3.png';
-import book4 from '../../assets/Images/TopChoices/book4.png';
-import book5 from '../../assets/Images/TopChoices/book5.png';
+import book1 from '../../../assets/Images/TopChoices/book1.png';
+import book2 from '../../../assets/Images/TopChoices/book2.png';
+import book3 from '../../../assets/Images/TopChoices/book3.png';
+import book4 from '../../../assets/Images/TopChoices/book4.png';
+import book5 from '../../../assets/Images/TopChoices/book5.png';
 
 const TopChoices = () => {
   return (
